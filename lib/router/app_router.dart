@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tourist_uz/info_page/info_page.dart';
 import 'package:tourist_uz/screens/splash_page.dart';
 
 class AppRouter {
@@ -8,6 +9,12 @@ class AppRouter {
       case "/splash":
         return MaterialPageRoute(
           builder: (context) => const SplashPage(),
+        );
+    }
+    switch (settings.name) {
+    case "/info":
+        return MaterialPageRoute(
+          builder: (context) => const InfoPage(),
         );
     }
   }
