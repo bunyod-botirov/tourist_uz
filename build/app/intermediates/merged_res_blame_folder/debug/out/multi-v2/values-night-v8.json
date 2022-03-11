@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/xasan/Desktop/tourist_uz/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "/home/bunyod/Documents/tourist_uz/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/home/xasan/Desktop/tourist_uz/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/home/bunyod/Documents/tourist_uz/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
