@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "619210510060",
+    "project_id": "tourist-uz-659e1",
+    "storage_bucket": "tourist-uz-659e1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:619210510060:android:a6b295b4f972094f645fc9",
+        "android_client_info": {
+          "package_name": "com.blackbears.tourist_uz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "619210510060-6plvasllui0q14kr1fmmakmnja9gjnv8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkPPReVACem1AqV_Kwel9DquLMkev7IJk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "619210510060-6plvasllui0q14kr1fmmakmnja9gjnv8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
