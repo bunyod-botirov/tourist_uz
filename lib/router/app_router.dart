@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tourist_uz/screens/splash_page.dart';
+import 'package:tourist_uz/screens/auth/splash_page.dart';
 
 class AppRouter {
   static Route? onGenerateRoute(RouteSettings settings) {
