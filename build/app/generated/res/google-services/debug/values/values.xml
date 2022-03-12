@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">619210510060-6plvasllui0q14kr1fmmakmnja9gjnv8.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">619210510060</string>
+    <string name="google_api_key" translatable="false">AIzaSyBkPPReVACem1AqV_Kwel9DquLMkev7IJk</string>
+    <string name="google_app_id" translatable="false">1:619210510060:android:a6b295b4f972094f645fc9</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBkPPReVACem1AqV_Kwel9DquLMkev7IJk</string>
+    <string name="google_storage_bucket" translatable="false">tourist-uz-659e1.appspot.com</string>
+    <string name="project_id" translatable="false">tourist-uz-659e1</string>
+</resources>
