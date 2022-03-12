@@ -1,0 +1,15 @@
+List citys = [
+    "Toshkent",
+    "Namangan",
+    "Andijon",
+    "Farg'ona",
+    "Guliston",
+    "Qarshi",
+    "Navoiy",
+    "Termiz",
+    "Samarqand",
+    "Buxoro",
+    "Urganch",
+    "Nukus",
+    "Jizzax",
+  ];
