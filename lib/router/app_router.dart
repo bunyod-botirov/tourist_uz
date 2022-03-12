@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tourist_uz/provider/bottom_bar_provider.dart';
+import 'package:tourist_uz/screens/home/bottom_bar_page.dart';
 import 'package:tourist_uz/screens/splash_page.dart';
 
 class AppRouter {
@@ -8,6 +10,10 @@ class AppRouter {
       case "/splash":
         return MaterialPageRoute(
           builder: (context) => const SplashPage(),
+        );
+      case "/bottom":
+        return MaterialPageRoute(
+          builder: (context) =>  BottomBarPage(),
         );
     }
   }
