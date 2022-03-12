@@ -13,11 +13,11 @@ class SizeConfig {
 }
 
 double getWidth(double inputWidth) {
-  return (inputWidth / 375.0) * SizeConfig._screenWidth!;
+  return (inputWidth / 414.0) * SizeConfig._screenWidth!;
 }
 
 double getHeight(double inputHeight) {
-  return (inputHeight / 667.0) * SizeConfig._screenHeight!;
+  return (inputHeight / 896.0) * SizeConfig._screenHeight!;
 }
 
 horizontalBox(double inputWidth) {
