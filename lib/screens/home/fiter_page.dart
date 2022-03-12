@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tourist_uz/constants/db.dart';
-import 'package:tourist_uz/sizeof/size_config.dart';
+import 'package:tourist_uz/constants/size_config.dart';
 
 class FilterPage extends StatelessWidget {
   const FilterPage({Key? key}) : super(key: key);

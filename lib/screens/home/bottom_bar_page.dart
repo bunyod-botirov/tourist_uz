@@ -2,9 +2,9 @@ import 'package:bottom_nav_bar/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tourist_uz/constants/colors.dart';
+import 'package:tourist_uz/constants/size_config.dart';
 import 'package:tourist_uz/provider/bottom_bar_provider.dart';
 import 'package:tourist_uz/screens/home/home_page.dart';
-import 'package:tourist_uz/sizeof/size_config.dart';
 
 class BottomBarPage extends StatelessWidget {
   BottomBarPage({ Key? key }) : super(key: key);
