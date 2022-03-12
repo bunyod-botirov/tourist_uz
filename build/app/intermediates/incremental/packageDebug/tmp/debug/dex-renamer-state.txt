@@ -1,0 +1,4 @@
+#Sat Mar 12 06:33:03 UZT 2022
+base.0=/home/bunyod/Documents/tourist_uz/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

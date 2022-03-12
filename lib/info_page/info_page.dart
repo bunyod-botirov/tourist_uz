@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tourist_uz/sizeof/size_config.dart';
+import 'package:tourist_uz/constants/size_config.dart';
 
 class InfoPage extends StatelessWidget {
   const InfoPage({Key? key}) : super(key: key);
