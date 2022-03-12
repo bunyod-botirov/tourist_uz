@@ -5,19 +5,18 @@ import 'package:tourist_uz/provider/bottom_bar_provider.dart';
 import 'package:tourist_uz/screens/home/home_page.dart';
 
 class BottomBarPage extends StatelessWidget {
-  BottomBarPage({ Key? key }) : super(key: key);
+  BottomBarPage({Key? key}) : super(key: key);
   final List _pages = [
-    HomePage(),
-    HomePage(),
-    HomePage(),
-    HomePage(),
+    Scaffold(),
+    Scaffold(),
+    Scaffold(),
+    Scaffold(),
   ];
 
   @override
   Widget build(BuildContext context) {
-    int item = context.watch<BottomBarProvider>().index;
     return Scaffold(
-      body: _pages[item],
+      body: _pages[context.watch<BottomBarProvider>().index],
       bottomNavigationBar: BottomNavBar(
         showElevation: true,
         itemCornerRadius: 10,
@@ -57,7 +56,7 @@ class BottomBarPage extends StatelessWidget {
             activeBackgroundColor: Colors.orange.shade300,
           ),
         ],
-      )
+      ),
     );
   }
 }

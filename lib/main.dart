@@ -1,25 +1,11 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:tourist_uz/provider/bottom_bar_provider.dart';
 import 'package:tourist_uz/router/app_router.dart';
 
-<<<<<<< HEAD
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(const MyApp());
-=======
-void main() {
-  runApp(
-    MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (context) => BottomBarProvider(),),
-      ],
-      child: MyApp(),
-    ),
-  );
->>>>>>> 4ce9f886f5b3ac91f3b5691b14b1ebe541664439
 }
 
 class MyApp extends StatelessWidget {
