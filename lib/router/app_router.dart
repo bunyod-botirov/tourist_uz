@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:tourist_uz/gid_page/gid_home.dart';
+import 'package:tourist_uz/gid_page/gid_info.dart';
 import 'package:tourist_uz/info_page/info_page.dart';
 import 'package:tourist_uz/screens/auth/splash_page.dart';
+import 'package:tourist_uz/screens/rek_page.dart';
 
 class AppRouter {
   static Route? onGenerateRoute(RouteSettings settings) {
@@ -10,11 +13,23 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) => const SplashPage(),
         );
-    }
-    switch (settings.name) {
+
       case "/info":
         return MaterialPageRoute(
           builder: (context) => const InfoPage(),
+        );
+
+      case "/rek":
+        return MaterialPageRoute(
+          builder: (context) => ReklamPage(),
+        );
+      case "/gidhome":
+        return MaterialPageRoute(
+          builder: (context) => GidHome(),
+        );
+        case "/gidinfo":
+        return MaterialPageRoute(
+          builder: (context) => GidInfo(),
         );
     }
   }

@@ -1,0 +1,4 @@
+#Sun Mar 13 02:47:46 UZT 2022
+base.0=/home/xasan/Desktop/tourist_uz/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
