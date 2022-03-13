@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:tourist_uz/provider/bottom_bar_provider.dart';
 import 'package:tourist_uz/provider/dropdow_provider.dart';
 import 'package:tourist_uz/provider/listview_provider.dart';
+import 'package:tourist_uz/provider/sim_provider.dart';
 import 'package:tourist_uz/provider/slider_provider.dart';
 import 'package:tourist_uz/router/app_router.dart';
 
@@ -20,7 +21,8 @@ void main() async{
         ChangeNotifierProvider(create: (context) => BottomBarProvider(),),
         ChangeNotifierProvider(create: (context) => DropdownProvider(),),
         ChangeNotifierProvider(create: (context) => ListProvider(),),
-        ChangeNotifierProvider(create: (context) => SliverProvider(),)
+        ChangeNotifierProvider(create: (context) => SliverProvider(),),
+        ChangeNotifierProvider(create: (context) => SimProvider(),),
       ],
       child: MyApp(),
     ),

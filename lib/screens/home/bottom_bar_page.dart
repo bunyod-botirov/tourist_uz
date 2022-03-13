@@ -5,12 +5,13 @@ import 'package:tourist_uz/constants/colors.dart';
 import 'package:tourist_uz/constants/size_config.dart';
 import 'package:tourist_uz/provider/bottom_bar_provider.dart';
 import 'package:tourist_uz/screens/home/home_page.dart';
+import 'package:tourist_uz/screens/home/sim_card_page.dart';
 
 class BottomBarPage extends StatelessWidget {
   BottomBarPage({ Key? key }) : super(key: key);
   final List _pages = [
     HomePage(),
-    HomePage(),
+    SimCardPage(),
     HomePage(),
     HomePage(),
   ];
@@ -39,8 +40,8 @@ class BottomBarPage extends StatelessWidget {
             activeBackgroundColor: ColorsConst.yellow,
           ),
           BottomNavBarItem(
-            title: 'Search',
-            icon: const Icon(Icons.search),
+            title: 'Sim Card',
+            icon: const Icon(Icons.sim_card),
             activeColor: Colors.white,
             inactiveColor: Colors.black,
             activeBackgroundColor: ColorsConst.yellow,
