@@ -102,6 +102,14 @@ flutter_lints
 2.12
 file:///home/bunyod/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_lints-1.0.4/
 file:///home/bunyod/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_lints-1.0.4/lib/
+flutter_page_indicator_tv
+2.12
+file:///home/bunyod/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_page_indicator_tv-0.0.3-nullsafety/
+file:///home/bunyod/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_page_indicator_tv-0.0.3-nullsafety/lib/
+flutter_swiper_tv
+2.12
+file:///home/bunyod/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_swiper_tv-1.1.6-nullsafety/
+file:///home/bunyod/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_swiper_tv-1.1.6-nullsafety/lib/
 http
 2.14
 file:///home/bunyod/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.13.4/
@@ -110,10 +118,6 @@ http_parser
 2.12
 file:///home/bunyod/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-4.0.0/
 file:///home/bunyod/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-4.0.0/lib/
-infinite_carousel
-2.12
-file:///home/bunyod/flutter/.pub-cache/hosted/pub.dartlang.org/infinite_carousel-1.0.2/
-file:///home/bunyod/flutter/.pub-cache/hosted/pub.dartlang.org/infinite_carousel-1.0.2/lib/
 intl
 2.12
 file:///home/bunyod/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.17.0/
@@ -238,6 +242,10 @@ test_api
 2.12
 file:///home/bunyod/flutter/.pub-cache/hosted/pub.dartlang.org/test_api-0.4.8/
 file:///home/bunyod/flutter/.pub-cache/hosted/pub.dartlang.org/test_api-0.4.8/lib/
+transformer_page_view_tv
+2.12
+file:///home/bunyod/flutter/.pub-cache/hosted/pub.dartlang.org/transformer_page_view_tv-0.1.7-nullsafety/
+file:///home/bunyod/flutter/.pub-cache/hosted/pub.dartlang.org/transformer_page_view_tv-0.1.7-nullsafety/lib/
 typed_data
 2.12
 file:///home/bunyod/flutter/.pub-cache/hosted/pub.dartlang.org/typed_data-1.3.0/
