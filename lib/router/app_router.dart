@@ -4,6 +4,7 @@ import 'package:tourist_uz/info_page/info_page.dart';
 import 'package:tourist_uz/screens/auth/sign_in.dart';
 import 'package:tourist_uz/screens/auth/sign_up.dart';
 import 'package:tourist_uz/screens/auth/splash_page.dart';
+import 'package:tourist_uz/screens/profile_page.dart';
 
 class AppRouter {
   static Route? onGenerateRoute(RouteSettings settings) {
@@ -28,6 +29,10 @@ class AppRouter {
       case "/bottom":
         return MaterialPageRoute(
           builder: (context) => BottomBarPage(),
+        );
+      case "/profile":
+        return MaterialPageRoute(
+          builder: (context) => const ProfilePage(),
         );
     }
   }
