@@ -18,7 +18,7 @@ class SimCardPage extends StatelessWidget {
     var item = context.watch<SimProvider>().simIndex;
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.only(left: getWidth(20), top: getHeight(40)),
+        padding: EdgeInsets.only(left: getWidth(20), top: getHeight(50)),
         child: Column(
           children: [
             SizedBox(width: getWidth(414)),

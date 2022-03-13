@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -6,6 +7,8 @@ import 'package:provider/provider.dart';
 import 'package:tourist_uz/constants/colors.dart';
 import 'package:tourist_uz/constants/db.dart';
 import 'package:tourist_uz/constants/size_config.dart';
+import 'package:tourist_uz/info_page/info_page.dart';
+import 'package:tourist_uz/model/db.dart';
 import 'package:tourist_uz/provider/dropdow_provider.dart';
 import 'package:tourist_uz/provider/listview_provider.dart';
 
@@ -16,11 +19,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     var item = context.watch<ListProvider>().item;
+    String name = context.watch<ListProvider>().name;
     return Scaffold(
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: getHeight(40)),
+          SizedBox(height: getHeight(50)),
           Row(
             children: [
               SizedBox(width: getWidth(10)),
@@ -33,7 +37,7 @@ class HomePage extends StatelessWidget {
               ),
               const Spacer(),
               Text(
-                "Hello, Lola",
+                "Hello, Bunyod",
                 style: TextStyle(fontSize: getHeight(18)),
               ),
               SizedBox(width: getWidth(10)),
@@ -45,8 +49,8 @@ class HomePage extends StatelessWidget {
                   border: Border.all(color: Colors.grey),
                   image: const DecorationImage(
                       fit: BoxFit.cover,
-                      image: CachedNetworkImageProvider(
-                          "https://img.dtnext.in/Articles/2022/Jan/202201071317092566_Shweta-Tripathi-I-am-a-bit-of-a-fiery-person-myself_SECVPF.gif")),
+                      image: AssetImage(
+                          "assets/images/photo.jpg")),
                 ),
               ),
               SizedBox(width: getWidth(20)),
@@ -176,59 +180,67 @@ class HomePage extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height: getHeight(380),
+            height: getHeight(350),
             width: getWidth(414),
             child: CarouselSlider.builder(
-              itemCount: 4,
+              itemCount: firestore[name].length,
               itemBuilder: (context, index, ind) {
-                return Container(
-                  height: getHeight(300),
-                  width: getHeight(300),
-                  decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.all(Radius.circular(20)),
-                    border: Border.all(color: Colors.grey),
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: NetworkImage(
-                          "https://source.unsplash.com/random/$item"),
-                    ),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.symmetric(
-                            vertical: getHeight(8), horizontal: getWidth(10)),
-                        child: Text(
-                          "Hotel name ",
-                          style: TextStyle(
-                            color: ColorsConst.yellow,
-                            fontSize: getHeight(19),
-                          ),
-                        ),
+                return InkWell(
+                  child: Container(
+                    height: getHeight(300),
+                    width: getHeight(300),
+                    decoration: BoxDecoration(
+                      borderRadius: const BorderRadius.all(Radius.circular(20)),
+                      border: Border.all(color: Colors.grey),
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: NetworkImage(
+                            firestore[name][index]["image"]),
                       ),
-                      Container(
-                        height: getHeight(40),
-                        width: getWidth(110),
-                        decoration: BoxDecoration(
-                          borderRadius: const BorderRadius.only(
-                              bottomRight: Radius.circular(20),
-                              topLeft: Radius.circular(15)),
-                          color: ColorsConst.grey.withOpacity(0.6),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "300\$",
-                            style: TextStyle(
-                              fontSize: getHeight(18),
-                              color: Colors.white,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.symmetric(
+                              vertical: getHeight(8), horizontal: getWidth(10)),
+                          child: SizedBox(
+                            width: getWidth(150),
+                            child: AutoSizeText(
+                              firestore[name][index]["name"],
+                              style: TextStyle(
+                                color: ColorsConst.white,
+                                fontSize: getHeight(19),
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ],
+                        Container(
+                          height: getHeight(40),
+                          width: getWidth(110),
+                          decoration: BoxDecoration(
+                            borderRadius: const BorderRadius.only(
+                                bottomRight: Radius.circular(20),
+                                topLeft: Radius.circular(15)),
+                            color: ColorsConst.grey.withOpacity(0.6),
+                          ),
+                          child: Center(
+                            child: Text(
+                              firestore[name][index]["price"],
+                              style: TextStyle(
+                                fontSize: getHeight(16),
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => InfoPage(name: firestore[name][index]["name"],price: firestore[name][index]["price"],mal: firestore[name][index]["description"],image: firestore[name][index]["image"],),));
+                  },
                 );
               },
               options: CarouselOptions(

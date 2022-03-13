@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper_tv/flutter_swiper.dart';
 import 'package:tourist_uz/constants/size_config.dart';
+import 'package:tourist_uz/model/db.dart';
 
 class ReklamPage extends StatelessWidget {
   ReklamPage({Key? key}) : super(key: key);
@@ -54,7 +55,7 @@ class ReklamPage extends StatelessWidget {
             ),
           ),
           Positioned(
-            left: getWidth(65),
+            left: getWidth(90),
             top: getHeight(120),
             child: Padding(
               padding: const EdgeInsets.only(top: 18.0),
@@ -78,12 +79,13 @@ class ReklamPage extends StatelessWidget {
                           image: DecorationImage(
                               fit: BoxFit.cover,
                               image: NetworkImage(
-                                  "https://source.unsplash.com/random/$index")),
+                                  firestore['taxis'][index]['logo'])),
                         ),
                       );
                     },
-                    itemCount: 5,
+                    itemCount: firestore['taxis'].length,
                     itemWidth: 300.0,
+                    autoplay: true,
                     layout: SwiperLayout.STACK,
                   ),
                 ),

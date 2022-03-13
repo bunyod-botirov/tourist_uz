@@ -9,11 +9,7 @@ class SignProvider extends ChangeNotifier {
       await _authUser.signInWithEmailAndPassword(
           email: email, password: password);
     } on FirebaseAuthException catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(e.message!),
-        ),
-      );
+      
     }
   }
 
@@ -22,11 +18,7 @@ class SignProvider extends ChangeNotifier {
       _authUser.createUserWithEmailAndPassword(
           email: email, password: password);
     } on FirebaseAuthException catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(e.message!),
-        ),
-      );
+     
     }
   }
 }

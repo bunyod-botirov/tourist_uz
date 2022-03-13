@@ -8,11 +8,7 @@ import 'package:tourist_uz/provider/sim_provider.dart';
 import 'package:tourist_uz/provider/slider_provider.dart';
 import 'package:tourist_uz/router/app_router.dart';
 
- 
-  
-
-
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(
@@ -28,7 +24,6 @@ void main() async{
     ),
   );
 }
-
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -56,7 +51,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       onGenerateRoute: AppRouter.onGenerateRoute,
-      initialRoute: "/bottom",
+      initialRoute: "/splash",
     );
   }
 }

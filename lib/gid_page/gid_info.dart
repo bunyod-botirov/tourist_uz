@@ -1,9 +1,15 @@
+import 'dart:io';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:tourist_uz/constants/size_config.dart';
 
 class GidInfo extends StatelessWidget {
-  const GidInfo({Key? key}) : super(key: key);
+  final String? name;
+  final String? price;
+  final String? img;
+  final List? til;
+  const GidInfo({Key? key, required this.name, required this.price, required this.til, required this.img}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,39 +25,28 @@ class GidInfo extends StatelessWidget {
                 decoration: BoxDecoration(
                   image: DecorationImage(
                       image: CachedNetworkImageProvider(
-                        "https://cdn2.lamag.com/wp-content/uploads/sites/6/2019/06/keanu-reeves-person-of-the-year-karwai-tang-getty.jpg",
+                        img!,
                       ),
                       fit: BoxFit.cover),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 18.0, top: 30.0),
+                  padding: const EdgeInsets.only(left: 18.0, top: 40.0),
                   child: Column(
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Icon(
-                            Icons.arrow_back_ios,
-                            color: Colors.white,
+                          InkWell(
+                            child: Icon(
+                              Icons.arrow_back_ios,
+                              color: Colors.white,
+                            ),
+                            onTap: (){
+                              Navigator.pop(context);
+                            },
                           ),
                         ],
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 300.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            Text(
-                              "Gidni Ismi",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 23,
-                                  color: Colors.white),
-                            ),
-                          ],
-                        ),
                       ),
                     ],
                   ),
@@ -81,7 +76,7 @@ class GidInfo extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
-                        height: getHeight(150),
+                        height: getHeight(210),
                         width: getWidth(250),
                         // color: Colors.cyan,
                         child: Padding(
@@ -90,44 +85,45 @@ class GidInfo extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
+                              SizedBox(height: getHeight(15)),
                               Text(
-                                "Imi ",
+                                name!,
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: getHeight(18)),
                               ),
+                              SizedBox(height: getHeight(15)),
                               Text(
-                                "Yoshi: ",
+                                price!,
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: getHeight(18)),
                               ),
-                              Text(
-                                "Price ",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: getHeight(18)),
-                              ),
+                              SizedBox(height: getHeight(15)),
                               Text(
                                 "Nechta Till Bilishi : ",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: getHeight(18)),
                               ),
+                              SizedBox(height: getHeight(15)),
                               Text(
-                                "  1. Inglish ",
+                                "  1. ${til![0]} ",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: getHeight(18),
                                     color: Colors.grey),
                               ),
+                              SizedBox(height: getHeight(15)),
                               Text(
-                                "  2. Rassian ",
+                                "  2. ${til![1]} ",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: getHeight(18),
                                     color: Colors.grey),
                               ),
+                              SizedBox(height: getHeight(15)),
                             ],
                           ),
                         ),
                       ),
                     ),
-                    SizedBox(height: getHeight(100),),
+                    SizedBox(height: getHeight(50),),
                     Container(
                       height: getHeight(60),
                       width: double.infinity,
@@ -151,12 +147,13 @@ class GidInfo extends StatelessWidget {
                               height: getHeight(50),
                               width: getWidth(70),
                               decoration: BoxDecoration(
-                                color: Colors.blueAccent,
+                                
                                 borderRadius: BorderRadius.circular(8.0),
                                 image: DecorationImage(
+                                  
                                   image: CachedNetworkImageProvider(
-                                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKQK6svPysf-PNZEL20UmXtUIACLHmdx-Shj990vLLeIAmG26h3D-l_iOVaqC330PcyYs&usqp=CAU"),
-                                  fit: BoxFit.cover,
+                                      "https://pnggrid.com/wp-content/uploads/2021/07/Facebook-Logo-Square-768x768.png"),
+                                  fit: BoxFit.contain,
                                 ),
                               ),
                             ),
