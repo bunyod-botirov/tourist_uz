@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper_tv/flutter_swiper.dart';
-import 'package:tourist_uz/sizeof/size_config.dart';
+import 'package:tourist_uz/constants/size_config.dart';
 
 class ReklamPage extends StatelessWidget {
   ReklamPage({Key? key}) : super(key: key);

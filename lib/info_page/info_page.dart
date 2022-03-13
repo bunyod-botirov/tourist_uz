@@ -1,6 +1,5 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:tourist_uz/sizeof/size_config.dart';
+import 'package:tourist_uz/constants/size_config.dart';
 
 class InfoPage extends StatelessWidget {
   const InfoPage({Key? key}) : super(key: key);
@@ -17,7 +16,7 @@ class InfoPage extends StatelessWidget {
             width: double.infinity,
             decoration: BoxDecoration(
               image: DecorationImage(
-              image: CachedNetworkImageProvider("https://m.economictimes.com/thumb/msid-86469051,width-1254,height-836,resizemode-4,imgsize-28786/indian-hotels.jpg"),
+              image: NetworkImage("https://m.economictimes.com/thumb/msid-86469051,width-1254,height-836,resizemode-4,imgsize-28786/indian-hotels.jpg"),
             ),),
           ),
           Container(
